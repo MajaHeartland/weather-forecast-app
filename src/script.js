@@ -61,7 +61,7 @@ fetchApiKey().then((API_KEY) => {
         forecastHTML += `
           <div class="col-2 forecast">
             <span class="forecast-day">${formatDay(time)}</span>
-            <img class="forecast-icon" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${icon}.png" alt="icon" />
+            <img class="forecast-icon" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${icon}.png" alt="icon" />
             <span class="forecast-min-temp">${Math.round(
               forecastDay.temperature.minimum
             )}° - </span><span class="forecast-max-temp">${Math.round(
@@ -103,7 +103,7 @@ fetchApiKey().then((API_KEY) => {
     let icon = document.querySelector("#icon");
     icon.setAttribute(
       "src",
-      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+      `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
     getForecast(response.data);
   }
